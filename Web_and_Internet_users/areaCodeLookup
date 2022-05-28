@@ -29,6 +29,7 @@ fi
 result="$(curl -s -dump $source | grep "name=\"$1" | \
  sed 's/<[^>]*>//g;s/^ //g' | \
  cut -f2- -d\ | cut -f1 -d\( )"
+
 echo "Area code $1 =$result"
 
 exit 0
