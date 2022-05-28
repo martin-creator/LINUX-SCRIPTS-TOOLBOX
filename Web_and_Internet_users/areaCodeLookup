@@ -26,7 +26,7 @@ fi
 
 # Now, finally, let's look up the area code...
 
-result="$(curl -s -dump $source | grep "name=\"$1" | \
+result="$(curl -s -dump $source | grep "name=\"$1" | \
  sed 's/<[^>]*>//g;s/^ //g' | \
  cut -f2- -d\ | cut -f1 -d\( )"
 echo "Area code $1 =$result"
